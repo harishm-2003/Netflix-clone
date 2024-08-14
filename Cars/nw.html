@@ -1,0 +1,30 @@
+<input type="text" onkeyup="check(event)">
+<div>
+    <h1>one</h1>
+    <h1>two</h1>
+    <h1>three</h1>
+    <h1>four</h1>
+    <h1>five</h1>
+</div>
+
+<script>
+    var enter=""
+    var div=document.querySelector("div")
+    var h1=div.querySelectorAll("h1")
+    function check()
+    {
+    enter=event.target.value
+    for(var i=0;i<h1.length;i++ )
+    {
+        if(h1[i].textContent.indexOf(enter)<0){
+            h1[i].style.display="none"
+        }
+        else{
+            h1[i].style.display="block"
+        }
+    }
+
+
+    }
+
+</script>
